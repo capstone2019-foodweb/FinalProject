@@ -13,3 +13,9 @@ This folder contains the cleaned CSV files used for our modeling.
 
 # 2) Code
 This folder contains the ipython notebooks used to run the modeling as well as to churn out the visualizations. 
+
+# 3) Websites
+There are a total of 3 websites submitted for this project.
+i)   Visualization of data (data exploration)
+ii)  Project Website. The Code can be found in this folder.
+iii) Website with map showing the predictive score that a restaurant will have two or more critical violations. The Code can be found in this folder as well.
