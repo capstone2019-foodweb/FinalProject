@@ -1,0 +1,185 @@
+.pad2 {
+  padding:20px;
+  -webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+          box-sizing:border-box;
+  }
+
+.map {
+  border-left:1px solid #fff;
+  position:absolute;
+  left:33.3333%;
+  width:66.6666%;
+  top:0;bottom:0;
+  }
+
+
+.marker-flagged, .marker{
+  border: none;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  background-color: rgba(255, 255, 255, 0.7);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6px;
+  border-radius: 50%;
+
+}
+
+.marker-flagged{
+  background-image: url(img/utensils-flagged.png);
+}
+
+.marker {
+  background-image: url(img/utensils.png);
+}
+
+body {
+  color: #404040;
+  font: 400 15px/24px 'Source Sans Pro', Sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px 2px;
+}
+
+a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #62efff;
+}
+
+.sidebar {
+  position: absolute;
+  width: 33.3333%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.pad2 {
+  padding: 20px;
+}
+
+.map {
+  position: absolute;
+  width: calc(200vw / 3 - 1.5%);
+  height: calc(100vh - 6%);
+  top: 4.5%;
+}
+
+#restaurant .layout{
+  color: "Red";
+}
+
+.map-gauge{
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+
+#flag-prob {
+  text-align: center;
+  color: #546E7A;
+  font-size: 1.5em;
+}
+
+.heading {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+}
+
+.listings {
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 60px;
+}
+
+.listings .item {
+  display: block;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.listings .item:last-child { border-bottom: none; }
+
+.l
+
+  /* Marker tweaks */
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content {
+  font: 400 15px/18px 'Work Sans', Sans-serif;
+  padding: 0;
+  width: 300px;
+}
+
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
+}
+
+.mapboxgl-popup-content h3 {
+  background: #91989F;
+  color: #fff;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 100;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup-content h4 {
+  color: #78909C;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.mapboxgl-popup-content div {
+  padding: 10px;
+}
+
+.mapboxgl-container .leaflet-marker-icon {
+  cursor: pointer;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #91989F;
+}

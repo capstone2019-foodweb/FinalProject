@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Health Code Violations Map</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css' rel='stylesheet'>
+    <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="map.css">
+  </head>
+  <body>
+    <div class="sidebar pad2">
+      <div class="heading">
+        <h1>About</h1>
+      </div>
+      <div id="info" class="info">
+        <p>This map shows the probability that a restaurant will be flagged with <b>two or more critical violations</b> on its next health inspection. These predictions were modeled off of a training dataset consisting of each restaurant's past health inspection scores, descriptive characteristics, and sentiment scores extracted from Yelp reviews.<br><br>Restaurants with red icons have been flagged as being at risk for receiving two or more critical violations on their next health examination.</p>
+        <h1>Where the Data Comes From</h1>
+        <p><a href="https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j">New York City restaurant inspection results</a> are published by the Department of Health on the NYC OpenData Portal. Each row contains an individual violation along with the final score and grade that the restaurant received for that inspection. The dataset also contains descriptive information about the restaurant's location and cuisine.</p>
+        <p>This data was supplemented with reviews scraped from <a href="https://yelp.com">Yelp</a> along with information regarding each establishment's price bracket and star rating.</p>
+        <h1>How Scores are Assigned</h1>
+        <p>We constructed a Random Forest Classifier to predict whether or not a restaurant would receive two or more critical violations on it's next health inspection. The model uses past violations, descriptive features, and aggregated sentiment scores for each establishment's Yelp reviews. These sentiment scores were generated using the <a href="https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">NRC Emotion Lexicon</a> </p>
+        <h1>What are Critical Violations?</h1>
+        <p>Health inspectors check for a wide variety of violations, but only critical violations pose a threat to public health. Critical violations range from not storing meat at a proper temperature to having rats or cockroaches on the premises. By targeting only critical violations, our model helps prioritize inspections for establishments that are at higher risk of causing an outbreak of foodborne illness.</p>
+        <a href="https://www1.nyc.gov/site/doh/business/food-operators/the-inspection-process.page">Learn more about the health inspection process.</a>
+      </div>
+    </div>
+    <div id="map" class = "map pad2"></div>
+    <script type="text/javascript" src="map.js"></script>
+  </body>
+</html>

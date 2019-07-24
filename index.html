@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viowatch</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="nav">
+    <span><a href="#main" class="nav-btn" id="main-btn">VIOWATCH</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="about-btn" href="#about">ABOUT</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="findings-btn" href="#findings">FINDINGS</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="methodology-btn" href="#methodology">METHODOLOGY</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="data-btn" href="#data">DATA</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="map-btn" href="map.html">MAP</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="intro-btn" href="#intro">INTRODUCTION</a></span>
+
+</div>
+<div id="main" class="full-page">
+    <div class="main-content">
+        <div class="main-div">
+            <h1 style="color: #F7D94C" class="main-title">VIOWATCH</h1>
+            <h2 class="main-title">PREDICTING HEALTH CODE VIOLATIONS IN NEW YORK CITY</h2>
+            <br>
+            <br>
+            <p class="main-text">Using machine learning methods to better predict restaurants that will receive multiple critical health code violations. By supplementing past inspection data with online reviews, our tool can help the DOHMH prioritize inspections for restaurants which are at greater risk of violating more serious health codes.
+            </p>
+        </div>
+        <img class="next-btn" src="img/down.png">
+    </div>
+</div>
+<div id="intro" class="full-page">
+    <div class="content">
+        <h2 class="section-title">introduction</h2>
+        <hr class="section-divide">
+        <div style="margin-right: 5%;" class="col4">
+            <img class="circle-img" src="img/intro-01.png">
+            <div class="text-area">
+                <p class="column-title">Perennial Problem</p>
+                <p class="column-text">Each year, ~ 1 in 6 Americans get sick, 128,000 hospitalized, and 3,000 die from foodborne illness in the United States.
+                </p>
+            </div>
+        </div>
+        <div style="margin-right: 5%;" class="col4">
+            <img class="circle-img" src="img/intro-02.png">
+            <div class="text-area">
+                <p class="column-title">Restaurant Inspections</p>
+                <p class="column-text">The Department of Health conducts inspections on New York City's 24,000 restaurants. Restaurants are scored on a variety of criteria ranging from general violations to critical violations.
+                </p>
+            </div>
+        </div>
+        <div style="margin-right: 5%;" class="col4">
+            <img class="circle-img" src="img/intro-03.png">
+            <div class="text-area">
+                <p class="column-title">Critical Violations</p>
+                <p class="column-text">Critical violations pose a direct risk of foodborne illness. Some examples of critical violations include the presence of vermin and storage of food at improper temperatures.
+                </p>
+            </div>
+        </div>
+        <div class="col4">
+            <img class="circle-img" src="img/intro-04.png">
+            <div class="text-area">
+                <p class="column-title">Enforcement Issues</p>
+                <p class="column-text">Due to the immense number of restaurants in New York City and limited department resources, an estimated 73% of violations go unenforced and 56% of high-risk establishments do not receive follow-up inspections.
+                </p>
+            </div>
+        </div>
+        <div class="col1">
+            <p><b>Research Question:</b> Can past violations, descriptive features, and online reviews be used to predict which restaurants will be flagged with two or more critical violations on an upcoming health inspection? Our project uses a Random Forest Classifer to predict inspection outcomes for New York City restaurants.</p>
+        </div>
+        <img class="next-btn" src="img/down.png">
+    </div>
+</div>
+<div id="map" class="full-page">
+    <iframe id="map-iframe" src="map.html"></iframe>
+</div>
+<div id="data" class="full-page">
+    <div class="content">
+        <h2 class="section-title">data</h2>
+        <hr class="section-divide-yellow">
+        <div class="col2">
+            <img class="square-img" src="img/nyc-health.png">
+            <div class="text-area">
+                <p class="column2-title">DOHMH New York City Restaurant Inspection Results Dataset</p>
+                <p class="column2-text">The Department of Health and Mental Hygiene <a class="inline-link" href="https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j">publishes all restaurant inspection results on the NYC OpenData Portal</a>. The dataset includes individual violations a restaurant received in a given inspection along with descriptive features about the establishment.</p>
+            </div>
+        </div>
+        <div class="col2">
+            <img class="square-img" src="img/yelp-c.png">
+            <div class="text-area">
+                <p class="column2-title">Data from Yelp</p>
+                <p class="column2-text">Yelp is a popular online review site that allows users to rate and review restaurants. We collected and analyzed over 200,000 reviews from over 13,000 restaurants in NYC to use in our model.</p>
+            </div>
+        </div>
+        <img style="margin-top: 0px" class="next-btn" src="img/down-black.png">
+    </div>
+</div>
+<div id="methodology" class="full-page">
+    <div class="content">
+        <h2 class="section-title">Methodology</h2>
+        <hr class="section-divide-yellow">
+        <div class="col3">
+          <img class="square-img" src="img/wordcloud.png">
+          <p class="column3-title">Sentiment Analysis</p>
+          <p class="column3-text">Using the NRC Word-Emotion Lexicon, we applied dictionary matching methods onto Yelp reviews to generate sentiment scores for each restaurant in the dataset. The NRC Word-Emotion Lexicon is a collection of words tagged with positive and negative sentiments as well as the following eight emotions: anger, anticipation, disgust, fear, joy, sadness, surprise, and trust.<br><br>Sentiment scores were generated based on the number of tokens belonging to each emotion/sentiment divided by the total number of tokens in the document (i.e. the collection of reviews for a restaurant). These scores were fed into our Random Forest Classifier.</p>
+        </div>
+        <div class="col3">
+          <img class="square-img" src="img/rf.png">
+          <p class="column3-title">Random Forest Classification</p>
+          <p class="column3-text">Each row in our dataset consisted of a restaurant's most recent health inspection and individual violation scores from their previous inspection. We also joined descriptive features about cuisine type, price, and ratings from Yelp, as well as the sentiment scores generated from our analysis of Yelp reviews. </p>
+        </div>
+        <div class="col3">
+          <img class="square-img" src="img/flag.png">
+          <p class="column3-title">Keyword Flagging</p>
+          <p class="column3-text">In addition to our sentiment scoring, we also flagged for specific health related keywords to include as a feature in our model.<br><br>Keywords included adjectives such as "gross" and "disgusting", as well as words for vermin such as "rats" or "cockroaches".</p>
+        </div>
+        <img style="margin-top: 0px" class="next-btn" src="img/down-black.png">
+      </div>
+</div>
+<div id="findings" style="height: 150vh" class="full-page">
+    <div class="content">
+        <h2 class="section-title">Findings</h2>
+        <hr class="section-divide-yellow">
+        <div class="col2">
+          <img class="square-img-small" src="img/res.png">
+          <p class="column2-title">Prediction Power</p>
+          <p class="column2-text">Our model was able to accurately flag 625 out 941 restaurants which received two or more critical violations in the test dataset.<br>The model had a notably high false positive rate, which could be attributed to a biased dataset (See: Data Bias & Policy Implications).</p>
+        </div>
+        <div class="col2">
+          <img class="square-img-small" src="img/featimp.png">
+          <p class="column2-title">Feature Importance</p>
+          <p class="column2-text">The most important features in determining the outcomes of our model were: whether or not the restaurant was a chain restaurant, a cafe vs. a full-service restaurant, and whether it had a one-dollar price rating on Yelp. Sentiment scores of Yelp reviews also proved to be important features in the model, which suggests that online platforms can contribute to enforcing health standards.</p>
+        </div>
+        <div style="margin-top: 0px; margin-bottom: 1.5%" class="col1">
+          <p class="column2-title">Data Bias & Policy Implications</p>
+          <img style="margin: auto; display: block;" src="img/hist.png">
+          <p style="width: 75%; margin: auto;">A closer look at the distribution of inspection scores reveals a noticable discontinuity at the threshold between scores which yield A and B grades. This deviation from an otherwise normal distribution suggests a presence of bias in the dataset which could be attributed to human error that occurred during the inspection process. This would explain the high false positive rate produced by our model.<br><br>Our findings suggest that machine learning has an important role to play in the future of enforcing food health standards. However, optimizing these contributions requires a better scoring system that reduces human error during the inspection process and prioritizes violations which could lead to foodborne illness. Standardizing the way inspections are scored will allow for better predictive power of machine learning techniques and improve the efficiency with which the Department of Health priortizes inspections.</p>
+        </div>
+        <img style="margin-top: 0px" class="next-btn" src="img/down-black.png">
+    </div>
+</div>
+<div id="about" class="full-page">
+    <div class="content">
+        <h2 class="section-title">About</h2>
+        <hr class="section-divide-yellow">
+        <div class="col3">
+            <img style="border-radius: 50%" class="profile-img" src="img/qiuyao.jpeg">
+            <p class="column3-title">Qiuyao Liu</p>
+            <div class="social-icons">
+              <a target="_blank" href="https://www.linkedin.com/in/adleykim/"><img class="social-img" src="img/linkedin.png"></a>
+              <a target="_blank" href="https://github.com/adley-kim"><img class="social-img" src="img/github.png"></a>
+            </div>
+        </div>
+        <div class="col3">
+            <img class="profile-img" src="img/kloe.png">
+            <p class="column3-title">Klo'e Ng</p>
+            <div class="social-icons">
+              <a target="_blank" href="https://www.linkedin.com/in/adleykim/"><img class="social-img" src="img/linkedin.png"></a>
+              <a target="_blank" href="https://github.com/adley-kim"><img class="social-img" src="img/github.png"></a>
+            </div>
+        </div>
+        <div class="col3">
+            <img style="border-radius: 50%" class="profile-img" src="img/adley.jpg">
+            <p class="column3-title">Adley Kim</p>
+            <div class="social-icons">
+                <a target="_blank" href="https://www.linkedin.com/in/adleykim/"><img class="social-img" src="img/linkedin.png"></a>
+                <a target="_blank" href="https://github.com/adley-kim"><img class="social-img" src="img/github.png"></a>
+            </div>
+        </div>
+        <div class="ack">
+            <p style="font-weight: bolder">Acknowledgements</p>
+            <p>We would like to thank Dr. Andy Karpf and Introspective Systems for their guidance and support throughout this capstone project.</p>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $('.next-btn').on('click', function () {
+        let ele = $(this).closest(".full-page").next();
+        $("html, body").animate({
+            scrollTop: $(ele).offset().top
+        }, 300);
+        return false;
+    });
+
+    $('.nav-btn').on('click', function(){
+      if($(this).attr('id') != null){
+        let section = $('div#' + $(this).attr('id').split('-')[0]);
+        $("html, body").animate({
+            scrollTop: $(section).offset().top
+        }, 500);
+      }
+      return false;
+    });
+</script>
+</html>
