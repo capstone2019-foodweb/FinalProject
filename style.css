@@ -33,6 +33,15 @@
         height: 100vh;
     }
 
+    .long{
+        width: 100vw;
+        height: 120vh;
+    }
+
+    .longer{
+      height: 180vh;
+    }
+
     .right-float-text{
         float: right;
         margin-right: 1em;
@@ -41,7 +50,7 @@
     .content{
         width: 80%;
         margin: auto;
-        padding-top: 14vh;
+        padding-top: calc(4em + 2.5vh);
     }
 
     .main-content{
