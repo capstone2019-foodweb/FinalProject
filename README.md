@@ -26,3 +26,6 @@ The files can be found in the rest of the files (Folder 'Img' as well as index.h
 It is recommended to do a local gitclone as the files are too big. The ipython notebooks (Code) can be read by referencing the CSV files in the Data folder.
 
 The website URL : https://capstone2019-foodweb.github.io/FinalProject/
+
+
+The team would like to thank Dr. Andy Karpf (Mentor) and Introspective Systems (Sponsor) for their guidance and support throughout this capstone project.
