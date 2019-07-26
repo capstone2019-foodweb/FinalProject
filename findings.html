@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Viowatch</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="nav">
+    <span><a href="index.html" class="nav-btn" id="main-btn">VIOWATCH</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="about-btn" href="about.html">ABOUT</a></span>
+    <span class="right-float-text"><a class="nav-btn" style="color: #F7D94C" id="findings-btn" href="findings.html">FINDINGS</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="methodology-btn" href="methodology.html">METHODOLOGY</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="data-btn" href="data.html">DATA</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="map-btn" href="map-page.html">MAP</a></span>
+</div>
+<div id="findings" class="full-page">
+    <div class="content">
+        <h2 class="section-title">Findings</h2>
+        <hr class="section-divide-yellow">
+        <div class="col2">
+            <img class="square-img-small" src="img/res.png">
+            <p class="column2-title">Prediction Power</p>
+            <p class="column2-text">Our model was able to accurately flag 625 out 941 restaurants which received two or more critical violations in the test dataset.<br>The model had a notably high false positive rate, which could be attributed to a biased dataset (See: Data Bias & Policy Implications).</p>
+        </div>
+        <div class="col2">
+            <img class="square-img-small" src="img/featimp.png">
+            <p class="column2-title">Feature Importance</p>
+            <p class="column2-text">The most important features in determining the outcomes of our model were: whether or not the restaurant was a chain restaurant, a cafe vs. a full-service restaurant, and whether it had a one-dollar price rating on Yelp. Sentiment scores of Yelp reviews also proved to be important features in the model, which suggests that online platforms can contribute to enforcing health standards.</p>
+        </div>
+        <div style="margin-top: 0px; margin-bottom: 1.5%" class="col1">
+            <p class="column2-title">Data Bias & Policy Implications</p>
+            <img style="margin: auto; display: block; width: 100%" src="img/hist.png">
+            <p style="width: 75%; margin: auto;">A closer look at the distribution of inspection scores reveals a noticable discontinuity at the threshold between scores which yield A and B grades. This deviation from an otherwise normal distribution suggests a presence of bias in the dataset which could be attributed to human error that occurred during the inspection process. This would explain the high false positive rate produced by our model.<br><br>Our findings suggest that machine learning has an important role to play in the future of enforcing food health standards. However, optimizing these contributions requires a better scoring system that reduces human error during the inspection process and prioritizes violations which could lead to foodborne illness. Standardizing the way inspections are scored will allow for better predictive power of machine learning techniques and improve the efficiency with which the Department of Health priortizes inspections.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

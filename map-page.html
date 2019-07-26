@@ -8,26 +8,17 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body style="overflow: hidden">
 <div id="nav">
-    <span><a style="color: #F7D94C"  href="index.html" class="nav-btn" id="main-btn">VIOWATCH</a></span>
+    <span><a href="index.html" class="nav-btn" id="main-btn">VIOWATCH</a></span>
     <span class="right-float-text"><a class="nav-btn" id="about-btn" href="about.html">ABOUT</a></span>
     <span class="right-float-text"><a class="nav-btn" id="findings-btn" href="findings.html">FINDINGS</a></span>
     <span class="right-float-text"><a class="nav-btn" id="methodology-btn" href="methodology.html">METHODOLOGY</a></span>
     <span class="right-float-text"><a class="nav-btn" id="data-btn" href="data.html">DATA</a></span>
-    <span class="right-float-text"><a class="nav-btn" id="map-btn" href="map-page.html">MAP</a></span>
+    <span class="right-float-text"><a class="nav-btn" style="color: #F7D94C" id="map-btn" href="map-page.html">MAP</a></span>
 </div>
-<div id="main" class="full-page">
-    <div class="main-content">
-        <div class="main-div">
-            <h1 style="color: #F7D94C" class="main-title">VIOWATCH</h1>
-            <h2 class="main-title">PREDICTING HEALTH CODE VIOLATIONS IN NEW YORK CITY</h2>
-            <br>
-            <br>
-            <p class="main-text">Using machine learning methods to better predict restaurants that will receive multiple critical health code violations. By supplementing past inspection data with online reviews, our tool can help the DOHMH prioritize inspections for restaurants which are at greater risk of violating more serious health codes.
-            </p>
-        </div>
-    </div>
+<div id="map" class="full-page">
+    <iframe id="map-iframe" src="map.html"></iframe>
 </div>
 </body>
 </html>

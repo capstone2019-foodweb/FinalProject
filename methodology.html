@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Viowatch</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="nav">
+    <span><a href="index.html" class="nav-btn" id="main-btn">VIOWATCH</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="about-btn" href="about.html">ABOUT</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="findings-btn" href="findings.html">FINDINGS</a></span>
+    <span class="right-float-text"><a class="nav-btn" style="color: #F7D94C" id="methodology-btn" href="methodology.html">METHODOLOGY</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="data-btn" href="data.html">DATA</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="map-btn" href="map-page.html">MAP</a></span>
+</div>
+<div id="methodology" class="full-page">
+    <div class="content">
+        <h2 class="section-title">Methodology</h2>
+        <hr class="section-divide-yellow">
+        <div class="col3">
+            <img class="square-img" src="img/wordcloud.png">
+            <p class="column3-title">Sentiment Analysis</p>
+            <p class="column3-text">Using the NRC Word-Emotion Lexicon, we applied dictionary matching methods onto Yelp reviews to generate sentiment scores for each restaurant in the dataset. The NRC Word-Emotion Lexicon is a collection of words tagged with positive and negative sentiments as well as the following eight emotions: anger, anticipation, disgust, fear, joy, sadness, surprise, and trust.<br><br>Sentiment scores were generated based on the number of tokens belonging to each emotion/sentiment divided by the total number of tokens in the document (i.e. the collection of reviews for a restaurant). These scores were fed into our Random Forest Classifier.</p>
+        </div>
+        <div class="col3">
+            <img class="square-img" src="img/rf.png">
+            <p class="column3-title">Random Forest Classification</p>
+            <p class="column3-text">Each row in our dataset consisted of a restaurant's most recent health inspection and individual violation scores from their previous inspection. We also joined descriptive features about cuisine type, price, and ratings from Yelp, as well as the sentiment scores generated from our analysis of Yelp reviews. </p>
+        </div>
+        <div class="col3">
+            <img class="square-img" src="img/flag.png">
+            <p class="column3-title">Keyword Flagging</p>
+            <p class="column3-text">In addition to our sentiment scoring, we also flagged for specific health related keywords to include as a feature in our model.<br><br>Keywords included adjectives such as "gross" and "disgusting", as well as words for vermin such as "rats" or "cockroaches".</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

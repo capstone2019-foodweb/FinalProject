@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Viowatch</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="nav">
+    <span><a href="index.html" class="nav-btn" id="main-btn">VIOWATCH</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="about-btn" href="about.html">ABOUT</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="findings-btn" href="findings.html">FINDINGS</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="methodology-btn" href="methodology.html">METHODOLOGY</a></span>
+    <span class="right-float-text"><a class="nav-btn" style="color: #F7D94C" id="data-btn" href="data.html">DATA</a></span>
+    <span class="right-float-text"><a class="nav-btn" id="map-btn" href="map-page.html">MAP</a></span>
+</div>
+<div id="data" class="full-page">
+    <div class="content">
+        <h2 class="section-title">Data</h2>
+        <hr class="section-divide-yellow">
+        <div class="col2">
+            <img class="square-img" src="img/nyc-health.png">
+            <div class="text-area">
+                <p class="column2-title">DOHMH New York City Restaurant Inspection Results Dataset</p>
+                <p class="column2-text">The Department of Health and Mental Hygiene <a class="inline-link" href="https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j">publishes all restaurant inspection results on the NYC OpenData Portal</a>. The dataset includes individual violations a restaurant received in a given inspection along with descriptive features about the establishment.</p>
+            </div>
+        </div>
+        <div class="col2">
+            <img class="square-img" src="img/yelp-c.png">
+            <div class="text-area">
+                <p class="column2-title">Data from Yelp</p>
+                <p class="column2-text">Yelp is a popular online review site that allows users to rate and review restaurants. We collected and analyzed over 200,000 reviews from over 13,000 restaurants in NYC to use in our model.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
